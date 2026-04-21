@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b4cbceb3d6ca9e4fbef321b56eed1de, type: 3}
+  m_Name: rareBlueShirt
+  m_EditorClassIdentifier: Assembly-CSharp::ShirtData
+  shirtId: 0
+  namee: SeamLess Shirt
+  price: 500
+  shirtMesh: {fileID: 8930882756346552654, guid: fec8cb545c866d343805abe19d31159b, type: 3}
+  shirtMaterial: {fileID: 2100000, guid: bdf719a76a1fcd04f8618e3bdbb89d6c, type: 2}
+  shirtIcon: {fileID: 21300000, guid: 71f668d583766de49931ef63d899d79f, type: 3}
