@@ -78,8 +78,11 @@ public class PlayerMovement : NetworkBehaviour
 
 
             Vector3 move = forward * input.y + right * input.x;
+
+            
             targetRotation = Quaternion.LookRotation(move);
             transform.rotation = Quaternion.Lerp(transform.rotation,targetRotation,rotationSpeed*Time.deltaTime);
+            
 
             Vector3 vel = rb.linearVelocity;
             vel.x = move.x * Speed;
@@ -89,9 +92,8 @@ public class PlayerMovement : NetworkBehaviour
         else
         {
             rb.linearVelocity = new Vector3(0, rb.linearVelocity.y , 0);
+            
         }
     }
-
-    
     
 }

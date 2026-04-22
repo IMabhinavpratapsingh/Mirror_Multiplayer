@@ -330,7 +330,7 @@ MonoBehaviour:
   target: {fileID: 958419600954719397}
   updateMethod: 0
   syncPosition: 1
-  syncRotation: 0
+  syncRotation: 1
   syncScale: 0
   onlySyncOnChange: 1
   compressRotation: 1
