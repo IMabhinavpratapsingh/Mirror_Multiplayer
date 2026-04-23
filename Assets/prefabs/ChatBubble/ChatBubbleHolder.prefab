@@ -51,6 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShowChat
   textUI: {fileID: 4971122661232052787}
   forrot: {fileID: 965007884302977603}
+  cam: {fileID: 0}
 --- !u!1 &2616635188396529595
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,7 +159,7 @@ GameObject:
   m_Component:
   - component: {fileID: 965007884302977603}
   m_Layer: 0
-  m_Name: ddd
+  m_Name: content
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

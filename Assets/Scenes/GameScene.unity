@@ -6531,6 +6531,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OrbitCamera
   target: {fileID: 0}
+  offset: {x: 0, y: 0, z: -5}
+  zoomSpeed: 0.05
+  minZoom: 2
+  maxZoom: 20
+  orbitRotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1001 &741854296
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -9,24 +9,37 @@ public class ShowChat : MonoBehaviour
 {
     [SerializeField] public TMP_Text textUI;
     public Transform forrot;
-    public Transform cameraa;
-    OrbitCamera cam;
-
-    void OnEnable()
+    public OrbitCamera cam;
+    public static Transform mainCamTransform;
+    void Start()
     {
-        PlayerMovement.SetCamera += SetCameraa;
+        // 1. Agar pehli baar koi message spawn hua, toh camera dhoondo
+        if (mainCamTransform == null)
+        {
+            // Pehle scene mein OrbitCamera dhoondo (jo tumhara main camera script hai)
+            OrbitCamera orbit = FindAnyObjectByType<OrbitCamera>(FindObjectsInactive.Include);
+            if (orbit != null)
+            {
+                mainCamTransform = orbit.transform;
+            }
+            else if (Camera.main != null)
+            {
+                mainCamTransform = Camera.main.transform;
+            }
+        }
+        
+        StartCoroutine(StartTimer());
     }
-
-    void OnDisable()
-    {
-        PlayerMovement.SetCamera -= SetCameraa;
-    } 
 
     void Update()
     {
-        if(cam != null)
+        if (mainCamTransform == null)
         {
-            Vector3 dir = cam.transform.position - forrot.position;
+            Debug.Log("yes camera null");
+        }
+        if(mainCamTransform != null)
+        {
+            Vector3 dir = mainCamTransform.transform.position - forrot.position;
             // dir.y = 0;
             forrot.forward = -dir;
         }
@@ -45,9 +58,5 @@ public class ShowChat : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void SetCameraa(OrbitCamera cmm)
-    {
-        cam = cmm;
-    }
-
+    
 }
